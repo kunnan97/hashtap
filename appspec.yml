@@ -4,6 +4,9 @@ files:
   - source: /frontend
     destination: /home/ubuntu/hashtap/hashtap-app/frontend
 hooks:
+  ApplicationStop:
+    - location: /before-install.bat
+      timeout: 900  
   BeforeInstall:
     - location: /before-install.bat
       timeout: 900
