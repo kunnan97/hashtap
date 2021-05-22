@@ -1,0 +1,9 @@
+version: 0.0
+os: ubuntu
+files:
+  - source: /frontend
+    destination: /home/ubuntu/hashtap/hashtap-app/frontend
+hooks:
+  BeforeInstall:
+    - location: /before-install.bat
+      timeout: 900
