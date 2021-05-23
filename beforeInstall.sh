@@ -1,6 +1,6 @@
 #!/bin/bash
 ls
-cd frontend
+cd /home/ubuntu/hashtap/hashtap-app/frontend
 rm -r *
 cd ..
 ls
