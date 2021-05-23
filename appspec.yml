@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /frontend
     destination: /home/ubuntu/hashtap/hashtap-app/frontend
+  - source: /backend
+    destination: /home/ubuntu/hashtap/hashtap-app/backend
 hooks:
   # ApplicationStop:
   #   - location: 

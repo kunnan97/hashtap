@@ -1,15 +1,16 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const pool = require ("./db");
+// const pool = require ("./db");
 
-const PORT = process.env.PORT || 5000;
+const PORT = 3001;
 // Middleware
 app.use(cors());
 app.use(express.json());
 
 
 app.use("/auth", require("./routes/jwtAuth"));
+app.use("/scrape", require("./routes/scrape"));
 
 // Routes
 app.get("/api/test/:id", async(req, res) => {
@@ -20,7 +21,7 @@ app.get("/api/test/:id", async(req, res) => {
 			"SELECT * FROM Test WHERE Test.id = ($1)",
 			[id]
 		)
-		res.send(getTest.rows);
+		res.send({user: "BOO!"});
 	} catch (err) {
 		console.error(err.message);
 	}
