@@ -41,7 +41,7 @@ class HomePage extends Component {
         return ( 
             <div className = "homePage">
                 <div className = "homePageContent">
-                    <h2> Hello World! (Redux Testing): {this.props.helloWorldStatus} </h2>
+                    <h2> Hello World! (Redux Testing!): {this.props.helloWorldStatus} </h2>
                     <form onSubmit={this.handleSubmit}>
                             <input type = "text" name = "text" placeholder = "Enter text" />
                             <button> Change </button>
