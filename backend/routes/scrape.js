@@ -5,6 +5,7 @@ const jwtGenerator = require("../utils/jwtGenerator");
 router.get("/get-user/:username", async(req, res) => {
 	try {
         const username = req.params.username;
+        console.log("Starting scrape");
         scrape(username);
 	} catch (err) {
 		console.error(err.message);
@@ -16,6 +17,7 @@ router.get("/get-user/:username", async(req, res) => {
         const puppeteer = require('puppeteer');
         const cheerio = require('cheerio');
 
+        console.log("Launching puppeteer");
         puppeteer.launch()
             .then(function(browser) {
                 return browser.newPage();
